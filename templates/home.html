@@ -1,8 +1,26 @@
 <html>
   <body>
     <form method="POST" action="/">
-      <input type="text" name="title">
-      <input type="submit" value="Add">
+      <label for="FirstName">First name:</label><br>
+      <input type="text" name="FirstName"><br>
+      <label for="LastName">Last name:</label><br>
+      <input type="text" name="LastName"><br>
+      <label for="Email">Email:</label><br>
+      <input type="email" name="Email"><br>
+      <label for="Age">Age:</label><br>
+      <input type="number" name="Age"><br>
+      <label for="country">Country</label><br>
+      <input type="text" name="country"><br>
+      <label for="city">City</label><br>
+      <input type="text" name="city"><br>
+      <label for="gender">Gender:</label><br>
+     <input type="radio" name="gender" id="gender_Male" value="Male" />
+     <input type="radio" name="gender" id="gender_Female" value="Female" /><br>
+     <label for="has_diabete">Living With Diabettes</label><br>
+     <input type="radio" name="has_diabete" id="has_diabete" value="Yes" />
+     <input type="radio" name="has_diabete" id="has_no_diabete" value="No" /><br>
+    <input type="submit" value="Add">
+
     </form>
   </body>
 </html>

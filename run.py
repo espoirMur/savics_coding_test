@@ -11,7 +11,7 @@ db = SQLAlchemy(app)
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.form:
-        print(request.form)
+        print("with form")
     return render_template("home.html")
   
 if __name__ == "__main__":

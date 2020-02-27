@@ -15,6 +15,6 @@ class Address(db.Model) :
     country = db.Column(db.String(50), nullable=False)
 
 class MedicalRecord(db.Model):
-    has_diabetes = db.Column(db.Boolean, nullable=False, default=False)
+    has_diabetes = db.Column(db.Boolean, nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'),
         nullable=False)
