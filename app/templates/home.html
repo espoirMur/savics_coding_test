@@ -14,17 +14,17 @@
       <label for="city">City</label><br>
       <input type="text" name="city"><br>
       <label for="gender">Gender:</label><br>
-     <input type="radio" name="gender" id="gender_Male" value="Male" />
-     <input type="radio" name="gender" id="gender_Female" value="Female" /><br>
-     <label for="has_diabete">Living With Diabettes</label><br>
-     <input type="radio" name="has_diabete" id="has_diabete" value="Yes" />
-     <input type="radio" name="has_diabete" id="has_no_diabete" value="No" /><br>
+      Male <input type="radio" name="gender" id="gender_Male" value="Male" />
+      Female <input type="radio" name="gender" id="gender_Female" value="Female" /><br>
+     <label for="has_diabete">Living With Diabetes</label><br>
+     Yes :<input type="radio" name="has_diabete" id="has_diabete" value="Yes" />
+     No <input type="radio" name="has_diabete" id="has_no_diabete" value="No" /><br>
     <input type="submit" value="Add">
 
     </form>
      <h1>User List</h1>
     {% for record in records %}
-      <p>{{record.user.first_name}} {{record.user.last_name}} {{record.user.gender}}, {{record.user.age}}  ,- {{record.user.address.city}} ({{record.user.address.country}})</p>
+      <p>{{record.user.first_name}} {{record.user.last_name}} , {{'Male' if record.user.gender else 'Female'}}, {{record.user.age}}  ,- {{record.user.address.city}} ({{record.user.address.country}})</p>
     {% endfor %}
   </body>
 </html>

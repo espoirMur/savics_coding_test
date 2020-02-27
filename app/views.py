@@ -31,11 +31,8 @@ def home():
             db.session.add(medical_record)
             db.session.commit()
         except Exception as exc:
-            print(exc.__traceback__, '')
             return('an error occurs when saving data')
     elif request.method=='GET':
         records = MedicalRecord.query.all()
-        for record in records:
-            print(record.user.first_name, '=====>')
         return render_template("home.html", records=records)
     return render_template("home.html")
