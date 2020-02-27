@@ -22,5 +22,9 @@
     <input type="submit" value="Add">
 
     </form>
+     <h1>User List</h1>
+    {% for record in records %}
+      <p>{{record.user.first_name}} {{record.user.last_name}} {{record.user.gender}}, {{record.user.age}}  ,- {{record.user.address.city}} ({{record.user.address.country}})</p>
+    {% endfor %}
   </body>
 </html>
